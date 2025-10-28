@@ -1,154 +1,168 @@
-"use client"
+// app/components/Footer/Footer.tsx
+import Image from "next/image";
+import Link from "next/link";
+import {
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa";
 
-import { Facebook, Twitter, Instagram } from "lucide-react"
-import Link from "next/link"
-
-export function Footer() {
-  const currentYear = new Date().getFullYear()
-
+export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Section */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">G</span>
-              </div>
-              <span className="font-bold text-lg text-gray-900">Globe VIN</span>
-            </div>
-            <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-              Your trusted partner for comprehensive vehicle history reports worldwide. We deliver authentic data from
-              international sources.
+    <footer className="bg-[#F9FAFB] text-gray-300 py-10 md:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          {/* Brand & Tagline */}
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center  gap-2 ">
+            <Image
+              src="/logo.png"
+              alt="Globe VIN"
+              width={100}
+              height={100}
+              className=" w-6 md:w-10 h-7 md:h-12 text-black"
+            />
+
+            <span className="font-medium text-md md:text-lg sm:inline text-[#000000] font-poppins  italic">
+              Globe VIN
+            </span>
+          </div>
+
+            <p className="text-sm text-gray-400 max-w-xs">
+              Driven by the Speed of Thought — empowering students to turn ideas
+              into websites and projects in minutes, no coding required.
             </p>
-            {/* Social Icons */}
-            <div className="flex gap-3 pt-2">
-              <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-purple-100 transition-all duration-300"
-              >
-                <Facebook className="w-4 h-4 text-gray-700" />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-purple-100 transition-all duration-300"
-              >
-                <Twitter className="w-4 h-4 text-gray-700" />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-purple-100 transition-all duration-300"
-              >
-                <Twitter className="w-4 h-4 text-gray-700" />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-purple-100 transition-all duration-300"
-              >
-                <Instagram className="w-4 h-4 text-gray-700" />
-              </a>
+          </div>
+
+          {/* Navigation Columns */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 col-span-2">
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-black font-semibold mb-4 text-sm uppercase tracking-wider">
+                Quick Links
+              </h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-black transition"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-black transition"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-black transition"
+                  >
+                    Our Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-black transition"
+                  >
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-black transition"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal / Policies */}
+            <div>
+              <h4 className="text-black font-semibold mb-4 text-sm uppercase tracking-wider">
+                Legal / Policies
+              </h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-black transition"
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-gray-400 hover:text-black transition"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Us */}
+            <div>
+              <h4 className="text-black font-semibold mb-4 text-sm uppercase tracking-wider">
+                Contact Us
+              </h4>
+              <div className="space-y-3 text-sm text-gray-400">
+                <div className="flex items-items-start gap-3">
+                  <FaMapMarkerAlt className="text-gray-500 mt-0.5 flex-shrink-0" />
+                  <span>
+                    123 Business Street, Suite 100
+                    <br />
+                    New York, NY 10001
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <FaPhone className="text-gray-500" />
+                  <a
+                    href="tel:+1234567890"
+                    className="hover:text-black transition"
+                  >
+                    +1 (234) 567-890
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <FaEnvelope className="text-gray-500" />
+                  <a
+                    href="mailto:info@globalvn.com"
+                    className="hover:text-black transition"
+                  >
+                    info@globalvn.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
-                >
-                  Sample Report
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
-                >
-                  API Config
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
-                >
-                  VIN Search
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="space-y-4">
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
-                >
-                  Business Hours
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
-                >
-                  Customer Support
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
-                >
-                  We are open 24/7
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Empty column for spacing on desktop */}
-          <div></div>
         </div>
-      </div>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-200 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <p className="text-gray-600 text-sm">© {currentYear} Global VIN. All rights reserved.</p>
-            <div className="flex gap-6 text-sm">
-              <Link href="#" className="text-gray-600 hover:text-purple-600 transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-gray-600 hover:text-purple-600 transition-colors duration-300">
-                Cookie Policy
-              </Link>
-            </div>
+        {/* Bottom Bar */}
+        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+          <p>&copy; 2025 Global VN. All rights reserved.</p>
+          <div className="flex gap-5">
+            <Link href="#" className="hover:text-gray-300 transition">
+              Privacy Policy
+            </Link>
+            <Link href="#" className="hover:text-gray-300 transition">
+              Terms of Service
+            </Link>
+            <Link href="#" className="hover:text-gray-300 transition">
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
