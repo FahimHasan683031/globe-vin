@@ -1,6 +1,7 @@
 import { Banner } from "@/components/bannar";
 import { DataSourch } from "@/components/dataSourch";
 import { Hero } from "@/components/herro";
+import { History } from "@/components/history";
 import { WhoWeAre } from "@/components/whoWeAre";
 import { WhyChoseUs } from "@/components/whyChoseUs";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <WhoWeAre />
       <DataSourch />
       <WhyChoseUs />
+      <History/>
     </div>
   );
 }
