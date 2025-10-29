@@ -9,11 +9,11 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: "Home", href: "#" },
-    { label: "Sample Report", href: "#" },
-    { label: "API Config", href: "#" },
-    { label: "VIN Search", href: "#" },
-    { label: "About Us", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "Sample Report", href: "/Report" },
+    { label: "API Config", href: "/ApiConfig" },
+    { label: "VIN Search", href: "/Search" },
+    { label: "About Us", href: "/AboutUs" },
   ];
 
   return (

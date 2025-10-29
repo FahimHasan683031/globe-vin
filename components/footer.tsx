@@ -1,43 +1,47 @@
 // app/components/Footer/Footer.tsx
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import { RiTwitterLine } from "react-icons/ri";
+import { FaInstagram } from "react-icons/fa";
+import { LuFacebook } from "react-icons/lu";
 
 export default function Footer() {
   return (
     <footer className="bg-[#F9FAFB] text-gray-300 py-10 md:py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {/* Brand & Tagline */}
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center  gap-2 ">
-            <Image
-              src="/logo.png"
-              alt="Globe VIN"
-              width={100}
-              height={100}
-              className=" w-6 md:w-10 h-7 md:h-12 text-black"
-            />
-
-            <span className="font-medium text-md md:text-lg sm:inline text-[#000000] font-poppins  italic">
-              Globe VIN
-            </span>
-          </div>
-
-            <p className="text-sm text-gray-400 max-w-xs">
-              Driven by the Speed of Thought — empowering students to turn ideas
-              into websites and projects in minutes, no coding required.
-            </p>
-          </div>
-
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="">
           {/* Navigation Columns */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 col-span-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-8">
+             {/* Brand & Tagline */}
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center  gap-2 ">
+                <Image
+                  src="/logo.png"
+                  alt="Globe VIN"
+                  width={100}
+                  height={100}
+                  className=" w-6 md:w-10 h-7 md:h-12 text-black"
+                />
+
+                <span className="font-medium text-md md:text-lg sm:inline text-[#000000] font-poppins  italic">
+                  Globe VIN
+                </span>
+              </div>
+
+              <p className="text-sm text-gray-400 max-w-xs">
+                Driven by the Speed of Thought — empowering students to turn
+                ideas into websites and projects in minutes, no coding required.
+              </p>
+              <div className="flex items-center gap-4">
+                <LuFacebook className="text-xl md:text-2xl text-black" />
+                <RiTwitterLine className="text-xl md:text-2xl text-black" />
+                <RiTwitterLine className="text-xl md:text-2xl text-black" />
+                <FaInstagram className="text-xl md:text-2xl text-black" />
+              </div>
+            </div>
             {/* Quick Links */}
-            <div>
+            <div >
               <h4 className="text-black font-semibold mb-4 text-sm uppercase tracking-wider">
                 Quick Links
               </h4>
